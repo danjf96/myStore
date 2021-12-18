@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#0086ff",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <Image
+    forwardedRef={[Function]}
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/logo.png",
+      }
+    }
+    style={
+      Object {
+        "opacity": 0,
+        "resizeMode": "contain",
+        "transform": Array [
+          Object {
+            "translateX": 200,
+          },
+          Object {
+            "skewX": "-30deg",
+          },
+        ],
+        "width": "90%",
+      }
+    }
+    testID="animation"
+  />
+</View>
+`;
