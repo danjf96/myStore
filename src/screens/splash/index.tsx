@@ -8,6 +8,7 @@ const Splash = (props:any) => {
 
     const endAnimation = (e:any) => {
         //console.log('END ANIMATION', e)
+        e.finished && props.navigation.navigate('BottomTabs')
     }
 
     return (
