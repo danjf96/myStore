@@ -12,6 +12,7 @@
  import { Provider } from 'react-redux';
  import Routes from './src/routes';
  import store from './src/store'
+ import 'react-native-gesture-handler';
  
  const App = () => {
    return (
