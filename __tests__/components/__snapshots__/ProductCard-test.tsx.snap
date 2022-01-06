@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "padding": 10,
+      "width": "100%",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://loremflickr.com/640/480/food",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 10,
+        "height": 100,
+        "marginRight": 15,
+        "width": 100,
+      }
+    }
+  />
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "marginBottom": 5,
+        }
+      }
+    >
+      test
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      R$ 
+      100,00
+    </Text>
+  </View>
+</View>
+`;
