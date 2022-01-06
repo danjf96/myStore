@@ -1,7 +1,11 @@
 export default {
     principal: '#0086ff',
-    secondary: '#FFFFF',
+    secondary: 'white',
 
     text: 'black',
-    title: 'black'
+    textSecondary: 'white',
+
+    title: 'black',
+
+    backgroundModal: '#353535',
 }

@@ -16,19 +16,19 @@ var api = axios.create({
 });
 
 api.interceptors.request.use(function (request) {
-    //console.log('REQUEST => ',request)
+    console.log('REQUEST => ',request)
     return request;
 }, function (error) {
-    //console.log('ERROR => ',error)
+    console.log('ERROR => ',error)
     return Promise.reject(error);
 });
 
 api.interceptors.response.use(function (response) {
     let { status, data } = response
-    //console.log('RESPONSE => ',response)
+    console.log('RESPONSE => ',response)
     return response;
 }, function (error) {
-    //console.log('ERROR => ',error)
+    console.log('ERROR => ',error)
     return Promise.reject(error);
 });
 

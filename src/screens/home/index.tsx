@@ -3,6 +3,7 @@ import { ActivityIndicator, RefreshControl } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import { useDispatch, useSelector } from 'react-redux'
 import Container from '../../components/Container'
+import InfoModal from '../../components/InfoModal'
 import ProductCard from '../../components/ProductCard'
 import { getProducts } from '../../store/ducks/products'
 import Styles from './styles'
@@ -44,6 +45,15 @@ const Home = () => {
         />        
 
         {loading && <ActivityIndicator size={'large'} testID='loading'/>}
+
+        <InfoModal  
+            title={'TITLE'} 
+            text={'TEXT'} 
+            textButton={'ONE'} 
+            textSecondButton='TWO' 
+            onPress={() => null} 
+            onPressSecondButton={() => null}
+        />     
     </Container>
 }
 
