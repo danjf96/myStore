@@ -12,11 +12,12 @@ const ProductCard = ({
     quantity = false,
     number = 0,
     onPressQuantity = () => null,
+    testId
 }:ProductsCardProps) => {
     const uri = image?.replace('http://lorempixel.com/','https://loremflickr.com/')
 
     return (
-        <View style={Styles.containerCard}>
+        <View style={Styles.containerCard} testID={testId}>
             <>
                 <Image source={{ uri }} style={Styles.image} />
 

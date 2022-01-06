@@ -9,7 +9,7 @@ const INITIAL_STATE: STATESTORE = {
 }
 
 //STATE CASES
-const STATE = (state = INITIAL_STATE, action: any) => {
+const STATE = (state = INITIAL_STATE, action: any):STATESTORE => {
     switch (action.type) {
         case Types.LOAD:
             return { ...state, loading: action.loading }
