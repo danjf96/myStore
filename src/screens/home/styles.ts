@@ -14,6 +14,10 @@ const Styles = StyleSheet.create({
     image: {
         width: '90%',
         resizeMode: 'contain'
+    },
+
+    productContainer: {
+        marginBottom: 12
     }
 })
 
