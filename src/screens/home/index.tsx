@@ -46,14 +46,14 @@ const Home = () => {
 
         {loading && <ActivityIndicator size={'large'} testID='loading'/>}
 
-        <InfoModal  
+        {/* <InfoModal  
             title={'TITLE'} 
             text={'TEXT'} 
             textButton={'ONE'} 
             textSecondButton='TWO' 
             onPress={() => null} 
             onPressSecondButton={() => null}
-        />     
+        />      */}
     </Container>
 }
 
