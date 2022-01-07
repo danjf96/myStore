@@ -8,7 +8,10 @@
 ## Development
 
 ### 1) Run the app:
-
+npm install
+ios:
+ - cd ios/
+ - pod install
 ```
 npx react-native run-ios
 or
