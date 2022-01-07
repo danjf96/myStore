@@ -1,4 +1,4 @@
-# Hermes UI
+# MyStore
 
 ## Environment setup
  - install node 14+
