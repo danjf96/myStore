@@ -9,6 +9,7 @@
 
 ### 1) Run the app:
 npm install
+```
 ios:
  - cd ios/
  - pod install
