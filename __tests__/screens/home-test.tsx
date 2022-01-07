@@ -66,6 +66,27 @@ describe('test loading and render items or not', () => {
     })
 
   });
+
+  test('renders correctly card products', async () => {
+
+    const { getAllByTestId, getByTestId, getByText, update } = await waitFor(() =>
+        render(component)
+    ); 
+    const input = getByTestId('input')
+    const searchButton = getByTestId('searchButton')
+    fireEvent(input,'changeText', 'rustic')
+    expect(input.props.value).toBe('rustic')
+
+    fireEvent(searchButton,'press')
+    expect(getByTestId('loading')).toBeTruthy()
+
+    await waitFor( () => {
+      const list = store.getState().products.listProducts
+      expect(list).not.toHaveLength(0)
+      expect(getAllByTestId('product')).not.toHaveLength(0)
+    })
+
+  });
   
 }) 
   

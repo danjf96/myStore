@@ -14,6 +14,109 @@ Array [
         }
       }
     >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginTop": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          collapsable={false}
+          onChangeText={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          placeholder="Search"
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 15,
+              "elevation": 2,
+              "height": 40,
+              "paddingHorizontal": 10,
+              "shadowColor": "#353535",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 0,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 2,
+              "width": "80%",
+            }
+          }
+          testID="input"
+          value=""
+        />
+        <RNGestureHandlerButton
+          collapsable={false}
+          exclusive={true}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+          testID="searchButton"
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#0086ff",
+                "borderRadius": 10,
+                "elevation": 2,
+                "flexDirection": "column",
+                "height": 40,
+                "justifyContent": "center",
+                "opacity": 1,
+                "shadowColor": "#353535",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 2,
+                "width": 40,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 20,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "anticon",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#0086ff",
+            "borderWidth": 0.5,
+            "marginVertical": 25,
+            "width": "100%",
+          }
+        }
+      />
       <RCTScrollView
         collapsable={false}
         data={Array []}
@@ -46,6 +149,7 @@ Array [
         <View />
       </RCTScrollView>
       <ActivityIndicator
+        color="#0086ff"
         size="large"
         testID="loading"
       />
