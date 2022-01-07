@@ -4,7 +4,7 @@
 
 import 'react-native';
 import React from 'react';
-import { render, waitFor } from 'react-native-testing-library';
+import { act, fireEvent, render, waitFor } from 'react-native-testing-library';
 import Home from '../../src/screens/home';
 import store from '../../src/store'
 import { Provider } from 'react-redux';
@@ -31,19 +31,29 @@ describe('test loading and render items or not', () => {
 
   });
 
-  test('renders correctly products', async () => {
+  test('renders correctly card products', async () => {
+    const onPress = jest.fn()
+    const onPressSecond = jest.fn()
 
-    const { getAllByTestId } = await waitFor(() =>
+    const { getAllByTestId, getByTestId, getByText, update } = await waitFor(() =>
         render(component)
     ); 
 
-    await fakeTime(2000)
-    const list = store.getState().products.listProducts
-    expect(list).not.toHaveLength(0)
-    expect(getAllByTestId('product')).not.toHaveLength(0)
+    await waitFor( () => {
+      const list = store.getState().products.listProducts
+      expect(list).not.toHaveLength(0)
+      expect(getAllByTestId('product')).not.toHaveLength(0)
+
+      fireEvent(getAllByTestId('product')[0], 'press')
+      
+      expect(getByTestId('InfoModal').props.visible).toBe(true)
+
+      fireEvent(getByText('CONTINUAR COMPRA'), 'press')
+      expect(getByTestId('InfoModal').props.visible).toBe(false)
+
+    })
 
   });
   
-
 }) 
   

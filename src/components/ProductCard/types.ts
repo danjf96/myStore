@@ -6,5 +6,6 @@ export interface ProductsCardProps extends PRODUCTSTATE {
     quantity?: boolean,
     onPressQuantity?: (type: 'increase' | 'decrease') => void,
     testId?: string,
-    styleContainer?: ViewStyle
+    styleContainer?: ViewStyle,
+    onPress?: () => void
 }

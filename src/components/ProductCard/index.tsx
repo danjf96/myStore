@@ -13,13 +13,14 @@ const ProductCard = ({
     number = 0,
     onPressQuantity = () => null,
     testId,
-    styleContainer
+    styleContainer,
+    onPress
 }:ProductsCardProps) => {
     const uri = image?.replace('http://lorempixel.com/','https://loremflickr.com/')
 
     return (
-        <View style={{...Styles.containerCard, ...styleContainer}} testID={testId}>
-            <>
+        <TouchableOpacity disabled={quantity} onPress={onPress} style={{...Styles.containerCard, ...styleContainer}} testID={testId}>
+            <TouchableOpacity disabled={!quantity} onPress={onPress} style={Styles.containerButton}>
                 <Image source={{ uri }} style={Styles.image} />
 
                 <View>
@@ -27,7 +28,7 @@ const ProductCard = ({
                     <Text style={Styles.price}>R$ {formatMoney(price)}</Text>
                     {/* <Text style={Styles.name}>Disponivel: {stock}</Text> */}
                 </View>
-            </>
+            </TouchableOpacity>
 
             {quantity && <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 15 }}>
 
@@ -43,7 +44,7 @@ const ProductCard = ({
 
             </View>}
 
-        </View>
+        </TouchableOpacity>
     )
 }
 

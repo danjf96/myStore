@@ -2,52 +2,107 @@
 
 exports[`Render component renders correctly 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 10,
+      "elevation": 2,
       "flexDirection": "row",
+      "opacity": 1,
       "padding": 10,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 4,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 2,
       "width": "100%",
     }
   }
 >
-  <Image
-    source={
+  <View
+    accessibilityState={
       Object {
-        "uri": "https://loremflickr.com/640/480/food",
+        "disabled": true,
       }
     }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "borderRadius": 10,
-        "height": 100,
-        "marginRight": 15,
-        "width": 100,
+        "alignItems": "center",
+        "flexDirection": "row",
+        "opacity": 1,
       }
     }
-  />
-  <View>
-    <Text
-      style={
+  >
+    <Image
+      source={
         Object {
-          "fontSize": 18,
-          "marginBottom": 5,
+          "uri": "https://loremflickr.com/640/480/food",
         }
       }
-    >
-      test
-    </Text>
-    <Text
       style={
         Object {
-          "fontSize": 18,
-          "fontWeight": "bold",
+          "borderRadius": 10,
+          "height": 60,
+          "marginRight": 15,
+          "width": 60,
         }
       }
-    >
-      R$ 
-      100,00
-    </Text>
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 18,
+            "marginBottom": 5,
+          }
+        }
+      >
+        test
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        R$ 
+        100,00
+      </Text>
+    </View>
   </View>
 </View>
 `;

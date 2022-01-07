@@ -22,6 +22,11 @@ const Styles = StyleSheet.create({
         } : {}
     },
 
+    containerButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+
     image: {
         width: 60,
         height: 60,
