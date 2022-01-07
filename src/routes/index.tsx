@@ -4,7 +4,7 @@ import {  BackHandler, StatusBar, Keyboard, KeyboardAvoidingView, Platform } fro
 import { NavigationContainer,  NavigationContainerRef } from '@react-navigation/native' //
 
 import RootStack from './RootStack'
-const rotasParaFechaApp = ['']
+const rotasParaFechaApp = ['Home']
 // const rotasRotaDesativaBack = []
 
 const Routes = () => {
@@ -55,7 +55,7 @@ const Routes = () => {
                         // let prevScreen = getActiveRouteName(state)
                         // let currentScreen = getActiveRouteName(state)
                         // if (prevScreen !== currentScreen) 
-                        // Keyboard.dismiss()                        
+                        Keyboard.dismiss()                        
                 }}>
                 <KeyboardAvoidingView behavior={'padding'} style={{ flex:1 }} keyboardVerticalOffset={Platform.OS == 'ios' ? undefined : -400} >
                     <RootStack />   

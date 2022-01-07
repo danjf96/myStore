@@ -72,22 +72,24 @@ const Home = (props: any) => {
        
        <View style={Styles.line}></View>
 
-       {!loading && <FlatList 
-            renderItem={ ({ item, index}) => <ProductCard 
-                    {...item}
-                    testId={'product'}
-                    styleContainer={Styles.productContainer}
-                    onPress={() => pressProduct(item)}
-                />
-            }
-            keyExtractor={ (item,index) => `product${index}`}
-            data={listProducts}
-            refreshControl={ <RefreshControl
-                refreshing={refreshing}
-                onRefresh={onRefresh}
-              />}
-            
-        /> }       
+       {!loading && 
+            <FlatList 
+                keyboardShouldPersistTaps='always'
+                renderItem={ ({ item, index}) => <ProductCard 
+                        {...item}
+                        testId={'product'}
+                        styleContainer={Styles.productContainer}
+                        onPress={() => pressProduct(item)}
+                    />
+                }
+                keyExtractor={ (item,index) => `product${index}`}
+                data={listProducts}
+                refreshControl={ <RefreshControl
+                    refreshing={refreshing}
+                    onRefresh={onRefresh}
+                />}
+                
+            /> }       
 
         {loading && <ActivityIndicator size={'large'} testID='loading' color={Colors.principal}/>}
 
