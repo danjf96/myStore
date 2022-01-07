@@ -20,7 +20,7 @@ npx react-native run-android
 This command generates new code component snapshots and runs all tests:
 
  ```
-npm test
+npm test -- -u
 ```
 
 To just run all tests the command is:
