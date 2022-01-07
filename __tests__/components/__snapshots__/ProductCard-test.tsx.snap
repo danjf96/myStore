@@ -25,14 +25,15 @@ exports[`Render component renders correctly 1`] = `
       "borderRadius": 10,
       "elevation": 2,
       "flexDirection": "row",
+      "justifyContent": "flex-start",
       "opacity": 1,
       "padding": 10,
-      "shadowColor": "black",
+      "shadowColor": "#353535",
       "shadowOffset": Object {
         "height": 4,
         "width": 0,
       },
-      "shadowOpacity": 0.5,
+      "shadowOpacity": 0.2,
       "shadowRadius": 2,
       "width": "100%",
     }
@@ -60,13 +61,14 @@ exports[`Render component renders correctly 1`] = `
         "alignItems": "center",
         "flexDirection": "row",
         "opacity": 1,
+        "width": "100%",
       }
     }
   >
     <Image
       source={
         Object {
-          "uri": "https://loremflickr.com/640/480/food",
+          "uri": "https://loremflickr.com/160/120/food",
         }
       }
       style={
@@ -80,6 +82,8 @@ exports[`Render component renders correctly 1`] = `
     />
     <View>
       <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
         style={
           Object {
             "color": "black",
@@ -91,6 +95,8 @@ exports[`Render component renders correctly 1`] = `
         test
       </Text>
       <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
         style={
           Object {
             "color": "black",
