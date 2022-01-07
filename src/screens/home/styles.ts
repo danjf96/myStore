@@ -1,5 +1,6 @@
 import { Platform, StyleSheet } from "react-native";
 import Colors from "../../assets/Colors";
+import { GlobalStyle } from "../../assets/GlobalStyles";
 
 const Styles = StyleSheet.create({
     container: {
@@ -69,11 +70,7 @@ const Styles = StyleSheet.create({
     },
 
     line: { 
-        width: '100%', 
-        marginVertical: 25, 
-        borderWidth: 0.3,
-        borderColor: Colors.principal,
-        opacity: 0.2
+        ...GlobalStyle.line
     }
 })
 

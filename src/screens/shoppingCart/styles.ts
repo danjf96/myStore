@@ -18,6 +18,13 @@ const Styles = StyleSheet.create({
 
     productContainer: {
         marginBottom: 12
+    },
+
+    price: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        marginTop: 10,
+        color: Colors.principal
     }
 })
 

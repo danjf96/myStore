@@ -38,7 +38,9 @@ const Home = (props: any) => {
         } else 
             newCart.push({...product, number: 1 })
 
-        dispatch(changeShoppingCart({ cart: newCart }))
+
+        const totalPrice = newCart.length > 0 ? newCart.map( n => n.price * n.number).reduce( (a,b) => a+b) : 0
+        dispatch(changeShoppingCart({ cart: newCart, totalPrice }))
         changeVisible()
     }
 

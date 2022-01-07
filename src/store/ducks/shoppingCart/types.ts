@@ -1,6 +1,7 @@
 export interface STATESTORE {
     loading: boolean,
-    cart: CARTSTATE[]
+    cart: CARTSTATE[],
+    totalPrice: number
 }
 
 //TYPES ACTIONS

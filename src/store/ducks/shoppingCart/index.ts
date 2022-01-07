@@ -5,7 +5,8 @@ import { STATESTORE, Types } from "./types";
 //REDUCERS
 const INITIAL_STATE: STATESTORE = {
     loading: false,
-    cart: []
+    cart: [],
+    totalPrice: 0
 }
 
 //STATE CASES

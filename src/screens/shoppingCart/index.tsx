@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { FlatList } from 'react-native'
+import { FlatList, Text, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
+import { GlobalStyle } from '../../assets/GlobalStyles'
 import Container from '../../components/Container'
 import ProductCard from '../../components/ProductCard'
 import { changeShoppingCart } from '../../store/ducks/shoppingCart'
+import { formatMoney } from '../../utils/mask'
 import Styles from './styles'
 
 const ShoppingCart = (props:any) => {
 
     const dispatch = useDispatch()
-    const { shoppingCart: { cart, loading } } = useSelector( ({ shoppingCart  } ) => ({  shoppingCart }) )
+    const { shoppingCart: { cart, loading, totalPrice } } = useSelector( ({ shoppingCart  } ) => ({  shoppingCart }) )
     
     const changeQuantity = (type: string, id:string) => {
         let newCart = cart
@@ -24,13 +26,17 @@ const ShoppingCart = (props:any) => {
                     newCart = newCart.map( n => n.id == id ? { ...n, number: n.number -= 1 } : n )
             break
         }
-
-        dispatch( changeShoppingCart({ cart: newCart }))
+        const totalPrice = newCart.length > 0 ? newCart.map( n => n.price * n.number).reduce( (a,b) => a+b) : 0
+        dispatch( changeShoppingCart({ cart: newCart, totalPrice }))
 
     }
 
     return (
         <Container>
+            <Text style={Styles.price}> Total: R$ {formatMoney(totalPrice)}</Text>
+
+            <View style={GlobalStyle.line}></View>
+            
             <FlatList 
                 renderItem={ ({ item, index}) => <ProductCard 
                         {...item}
