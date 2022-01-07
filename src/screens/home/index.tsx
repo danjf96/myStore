@@ -12,7 +12,7 @@ import Styles from './styles'
 const Home = (props: any) => {
     
     const dispatch = useDispatch()
-    const { products: { loading, listProducts } } = useSelector( ({ products  } ) => ({ products }) )
+    const { products: { loading, listProducts }, shoppingCart: { cart } } = useSelector( ({ products, shoppingCart  } ) => ({ products, shoppingCart }) )
     const [refreshing, setRefreshing] = React.useState(false);
     const [visible, setVisible] = React.useState(false);
 
@@ -28,6 +28,12 @@ const Home = (props: any) => {
     }
 
     const pressProduct = (product:any) => {
+        let newCart = cart
+        if(cart.find( v => v.id == product.id)) {
+            newCart = newCart.map( v => v.id == product.id ? { ...v, quantity: v.quantity += 1 } : v)
+        } else 
+            newCart.push({...product, quantity: 1 })
+
         changeVisible()
     }
 

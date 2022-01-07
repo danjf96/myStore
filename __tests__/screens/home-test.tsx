@@ -10,7 +10,7 @@ import store from '../../src/store'
 import { Provider } from 'react-redux';
 
 const component = (
-  <Provider store={store} > <Home /> </Provider>
+  <Provider store={store} > <Home navigation={{ navigate: (screen:'string') => null }}/> </Provider>
 );
 const fakeTime = (time: number) => new Promise( (resolve, reject) => setTimeout( () => resolve(null) ,time))
 
@@ -45,11 +45,15 @@ describe('test loading and render items or not', () => {
       expect(getAllByTestId('product')).not.toHaveLength(0)
 
       fireEvent(getAllByTestId('product')[0], 'press')
-      
       expect(getByTestId('InfoModal').props.visible).toBe(true)
 
       fireEvent(getByText('CONTINUAR COMPRA'), 'press')
       expect(getByTestId('InfoModal').props.visible).toBe(false)
+
+      fireEvent(getAllByTestId('product')[0], 'press')
+      fireEvent(getByText('CARRINHO'), 'press')
+      const shoppingCart = store.getState().shoppingCart
+      expect(shoppingCart.cart).not.toHaveLength(0)
 
     })
 

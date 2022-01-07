@@ -1,10 +1,12 @@
 
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 import products from './ducks/products'
+import shoppingCart from './ducks/shoppingCart'
 import ReduxThunk from 'redux-thunk';
 
 const reducers = {
-    products
+    products,
+    shoppingCart
 }
 
 const combinedReducers =  combineReducers(reducers)
