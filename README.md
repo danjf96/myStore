@@ -1,8 +1,8 @@
 # Hermes UI
 
 ## Environment setup
- - intall node 14+
- - intall react native 0.66+
+ - install node 14+
+ - install react native 0.66+
  - tutorial https://reactnative.dev/docs/environment-setup
 
 ## Development
