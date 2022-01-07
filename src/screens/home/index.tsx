@@ -30,9 +30,9 @@ const Home = (props: any) => {
     const pressProduct = (product:any) => {
         let newCart = cart
         if(cart.find( v => v.id == product.id)) {
-            newCart = newCart.map( v => v.id == product.id ? { ...v, quantity: v.quantity += 1 } : v)
+            newCart = newCart.map( v => v.id == product.id ? { ...v, number: v.number += 1 } : v)
         } else 
-            newCart.push({...product, quantity: 1 })
+            newCart.push({...product, number: 1 })
 
         changeVisible()
     }

@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/AntDesign'
 //ROUTES
 import Splash from '../screens/splash';
 import Home from '../screens/home';
+import ShoppingCart from '../screens/shoppingCart';
 import { Image } from 'react-native';
 
 const Stack = createStackNavigator();
@@ -30,7 +31,20 @@ const BottomTabs = () => {
                     ),
                 }}
             />
-            {/* <Tab.Screen name="ShoppingCart" component={() => null}  /> */}
+            <Tab.Screen 
+                name="ShoppingCart" 
+                component={ShoppingCart}
+                options={{
+                    tabBarLabel: 'Shopping Cart',
+                    tabBarIcon: ({ color, size }) => (
+                        <Icon
+                            name="shoppingcart"
+                            size={size}
+                            color={color}
+                        />
+                    ),
+                }}
+            />
         </Tab.Navigator> 
     )
 }

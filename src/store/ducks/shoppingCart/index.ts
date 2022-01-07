@@ -25,7 +25,7 @@ const STATE = (state = INITIAL_STATE, action: any):STATESTORE => {
 }
 
 //Actions Creators
-export const changeShoppingCart = (payload:{}) => {
+export const changeShoppingCart = (payload:any) => {
     return async (dispatch: (arg0:any) => any) => {
         dispatch({ type: Types.CHANGE, payload  })
     }

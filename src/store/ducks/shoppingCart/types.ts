@@ -19,5 +19,5 @@ export interface CARTSTATE {
     price: number,
     image: string,
     stock: number,
-    quantity: number
+    number: number
 }
