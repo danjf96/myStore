@@ -41,14 +41,22 @@ describe('test loading and render items or not', () => {
 
     await waitFor( () => {
       const list = store.getState().products.listProducts
+      const cart = store.getState().shoppingCart.cart
       expect(list).not.toHaveLength(0)
       expect(getAllByTestId('product')).not.toHaveLength(0)
 
+
       fireEvent(getAllByTestId('product')[0], 'press')
       expect(getByTestId('InfoModal').props.visible).toBe(true)
-
+  
       fireEvent(getByText('CONTINUAR COMPRA'), 'press')
       expect(getByTestId('InfoModal').props.visible).toBe(false)
+      expect(cart).not.toHaveLength(0)
+
+      fireEvent(getAllByTestId('product')[1], 'press')
+      expect(getByTestId('InfoModal').props.visible).toBe(true)
+      fireEvent(getByText('CONTINUAR COMPRA'), 'press')
+      expect(cart).toHaveLength(2)
 
       fireEvent(getAllByTestId('product')[0], 'press')
       fireEvent(getByText('CARRINHO'), 'press')
