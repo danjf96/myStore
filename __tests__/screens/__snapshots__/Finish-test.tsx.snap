@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  " ",
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0086ff",
+        "flexDirection": "column",
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+    >
+      <View
+        style={
+          Object {
+            "padding": 15,
+            "width": "100%",
+          }
+        }
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          exclusive={true}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            nativeID="animatedComponent"
+            style={
+              Object {
+                "marginBottom": 40,
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 30,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              󰅖
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 25,
+              "fontWeight": "bold",
+              "marginBottom": 40,
+            }
+          }
+        >
+          Compra finalizada com sucesso!
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "marginBottom": 20,
+            }
+          }
+        >
+          Valor total de R$ 
+          0,00
+          . Saldo atual de R$ 585,00
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "column",
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 60,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            󱊛
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+                "marginRight": 10,
+              }
+            }
+          >
+            Sua compra chegará em até 3 dias úteis
+          </Text>
+        </View>
+      </View>
+    </RCTSafeAreaView>
+  </View>,
+  " ",
+]
+`;

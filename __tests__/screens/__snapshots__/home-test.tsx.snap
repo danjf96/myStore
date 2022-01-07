@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  " ",
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+  >
+    <View
+      style={
+        Object {
+          "padding": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginTop": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          collapsable={false}
+          onChangeText={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          placeholder="Search"
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 15,
+              "elevation": 2,
+              "height": 40,
+              "paddingHorizontal": 10,
+              "shadowColor": "#353535",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 0,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 2,
+              "width": "80%",
+            }
+          }
+          testID="input"
+          value=""
+        />
+        <RNGestureHandlerButton
+          collapsable={false}
+          exclusive={true}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+          testID="searchButton"
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#0086ff",
+                "borderRadius": 10,
+                "elevation": 2,
+                "flexDirection": "column",
+                "height": 40,
+                "justifyContent": "center",
+                "opacity": 1,
+                "shadowColor": "#353535",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 2,
+                "width": 40,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 20,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "anticon",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#0086ff",
+            "borderWidth": 0.3,
+            "marginVertical": 25,
+            "opacity": 0.2,
+            "width": "100%",
+          }
+        }
+      />
+      <ActivityIndicator
+        color="#0086ff"
+        size="large"
+        testID="loading"
+      />
+      <Modal
+        animationType="fade"
+        hardwareAccelerated={false}
+        onPress={[Function]}
+        onPressSecondButton={[Function]}
+        testID="InfoModal"
+        text="Deseja continuar comprando ou ir para o carrinho?"
+        textButton="CARRINHO"
+        textSecondButton="CONTINUAR COMPRA"
+        title="Atenção!"
+        transparent={true}
+        visible={false}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#353535",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "center",
+                "opacity": 0.8,
+                "position": "absolute",
+                "width": "100%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 40,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 10,
+                  "padding": 24,
+                  "paddingTop": 32,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "lineHeight": 19.6,
+                    "marginBottom": 24,
+                  }
+                }
+              >
+                Atenção!
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                    "letterSpacing": 0.15,
+                    "lineHeight": 24,
+                    "marginBottom": 24,
+                    "textAlign": "left",
+                  }
+                }
+              >
+                Deseja continuar comprando ou ir para o carrinho?
+              </Text>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#0086ff",
+                      "borderRadius": 10,
+                      "height": 56,
+                      "justifyContent": "center",
+                      "marginBottom": 15,
+                      "opacity": 1,
+                      "padding": 10,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 16,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    CARRINHO
+                  </Text>
+                </View>
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "white",
+                      "borderColor": "#0086ff",
+                      "borderRadius": 10,
+                      "borderWidth": 1.5,
+                      "height": 56,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "padding": 10,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#0086ff",
+                        "fontSize": 16,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    CONTINUAR COMPRA
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </Modal>
+    </View>
+  </RCTSafeAreaView>,
+  " ",
+]
+`;
