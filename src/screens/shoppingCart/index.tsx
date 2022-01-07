@@ -1,10 +1,9 @@
-import React from 'react'
-import { FlatList, Text } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { FlatList } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import Container from '../../components/Container'
 import ProductCard from '../../components/ProductCard'
 import { changeShoppingCart } from '../../store/ducks/shoppingCart'
-import { CARTSTATE } from '../../store/ducks/shoppingCart/types'
 import Styles from './styles'
 
 const ShoppingCart = (props:any) => {
@@ -32,18 +31,18 @@ const ShoppingCart = (props:any) => {
 
     return (
         <Container>
-           <FlatList 
-            renderItem={ ({ item, index}) => <ProductCard 
-                    {...item}
-                    testId={'cart'}
-                    quantity={true}
-                    styleContainer={Styles.productContainer}
-                    onPressQuantity={ t => changeQuantity(t, item.id)}
-                />
-            }
-            keyExtractor={ (item,index) => `cart${index}`}
-            data={cart}
-        />        
+            <FlatList 
+                renderItem={ ({ item, index}) => <ProductCard 
+                        {...item}
+                        testId={'cart'}
+                        quantity={true}
+                        styleContainer={Styles.productContainer}
+                        onPressQuantity={ t => changeQuantity(t, item.id)}
+                    />
+                }
+                keyExtractor={ (item,index) => `cart${index}`}
+                data={cart}
+            />     
         </Container>
     )
 }

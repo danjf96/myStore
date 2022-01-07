@@ -7,7 +7,8 @@ import Icon from 'react-native-vector-icons/AntDesign'
 import Splash from '../screens/splash';
 import Home from '../screens/home';
 import ShoppingCart from '../screens/shoppingCart';
-import { Image } from 'react-native';
+import { View } from 'react-native';
+import Circle from '../components/Circle';
 
 const Stack = createStackNavigator();
 
@@ -37,11 +38,14 @@ const BottomTabs = () => {
                 options={{
                     tabBarLabel: 'Shopping Cart',
                     tabBarIcon: ({ color, size }) => (
-                        <Icon
-                            name="shoppingcart"
-                            size={size}
-                            color={color}
-                        />
+                        <View>
+                            <Icon
+                                name="shoppingcart"
+                                size={size}
+                                color={color}
+                            />
+                            <Circle style={{ position: 'absolute', left: 25, top: -5 }} />
+                        </View>
                     ),
                 }}
             />

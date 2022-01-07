@@ -7,6 +7,7 @@ import Container from '../../components/Container'
 import InfoModal from '../../components/InfoModal'
 import ProductCard from '../../components/ProductCard'
 import { getProducts } from '../../store/ducks/products'
+import { changeShoppingCart } from '../../store/ducks/shoppingCart'
 import Styles from './styles'
 
 const Home = (props: any) => {
@@ -34,6 +35,7 @@ const Home = (props: any) => {
         } else 
             newCart.push({...product, number: 1 })
 
+        dispatch(changeShoppingCart({ cart: newCart }))
         changeVisible()
     }
 

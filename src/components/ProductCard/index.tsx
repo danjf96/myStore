@@ -19,13 +19,13 @@ const ProductCard = ({
     const uri = image?.replace('http://lorempixel.com/','https://loremflickr.com/')
 
     return (
-        <TouchableOpacity disabled={quantity} onPress={onPress} style={{...Styles.containerCard, ...styleContainer}} testID={testId}>
-            <TouchableOpacity disabled={!quantity} onPress={onPress} style={Styles.containerButton}>
+        <TouchableOpacity disabled={quantity} onPress={onPress} style={{...Styles.containerCard, justifyContent: quantity ? 'space-between' : 'flex-start', ...styleContainer}} testID={testId}>
+            <TouchableOpacity disabled={!quantity} onPress={onPress} style={[Styles.containerButton,{ width: !quantity ? '100%' : '50%'}]}>
                 <Image source={{ uri }} style={Styles.image} />
 
                 <View>
-                    <Text style={Styles.name}>{name}</Text>
-                    <Text style={Styles.price}>R$ {formatMoney(price)}</Text>
+                    <Text numberOfLines={1} style={Styles.name} ellipsizeMode='tail'>{name}</Text>
+                    <Text numberOfLines={1} style={Styles.price} ellipsizeMode='tail'>R$ {formatMoney(price)}</Text>
                     {/* <Text style={Styles.name}>Disponivel: {stock}</Text> */}
                 </View>
             </TouchableOpacity>
