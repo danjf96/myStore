@@ -25,6 +25,54 @@ const Styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 10,
         color: Colors.principal
+    },
+
+    footer: {
+        position: 'absolute',
+        width: '100%',
+        bottom: 0,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        backgroundColor: 'white'
+    },
+
+    button: {
+        width: '100%',
+        height: 50,
+        borderRadius: 10,
+        backgroundColor: Colors.principal,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 10
+    },
+
+    buttonText: {
+        color: Colors.textSecondary,
+        fontSize: 18,
+        fontWeight:'bold'
+    },
+
+    buttonTwo: {
+        width: '100%',
+        height: 50,
+        borderRadius: 10,
+        backgroundColor: Colors.secondary,
+        borderWidth: 1,
+        borderColor: Colors.principal,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 10
+    },
+
+    buttonTextTwo: {
+        color: Colors.principal,
+        fontSize: 18,
+        fontWeight:'bold',
+        textAlign: 'center'
     }
 })
 

@@ -8,4 +8,5 @@ export interface PROPSMODALINFO extends ModalProps {
     onPress: () => void
     textSecondButton?: string,
     onPressSecondButton?: ()=> void
+    onClose?: ()=> void
 }
