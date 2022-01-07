@@ -16,7 +16,7 @@ const ProductCard = ({
     styleContainer,
     onPress
 }:ProductsCardProps) => {
-    const uri = image?.replace('http://lorempixel.com/','https://loremflickr.com/')
+    const uri = image?.replace('http://lorempixel.com/640/480','https://loremflickr.com/160/120')
 
     return (
         <TouchableOpacity disabled={quantity} onPress={onPress} style={{...Styles.containerCard, justifyContent: quantity ? 'space-between' : 'flex-start', ...styleContainer}} testID={testId}>
