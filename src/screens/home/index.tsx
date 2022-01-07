@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/core'
 import React, { useEffect } from 'react'
 import { ActivityIndicator, RefreshControl, View } from 'react-native'
 import { FlatList, TextInput, TouchableOpacity } from 'react-native-gesture-handler'
@@ -15,7 +14,7 @@ import Colors from '../../assets/Colors'
 const Home = (props: any) => {
     
     const dispatch = useDispatch()
-    const { products: { loading, listProducts }, shoppingCart: { cart } } = useSelector( ({ products, shoppingCart  } ) => ({ products, shoppingCart }) )
+    const { products: { loading, listProducts }, shoppingCart: { cart, payment } } = useSelector( ({ products, shoppingCart  } ) => ({ products, shoppingCart }) )
     const [refreshing, setRefreshing] = React.useState(false);
     const [visible, setVisible] = React.useState(false);
     const [search, setSearch] = React.useState('');

@@ -1,12 +1,14 @@
 export interface STATESTORE {
     loading: boolean,
     cart: CARTSTATE[],
-    totalPrice: number
+    totalPrice: number,
+    payment?: 'creditCard' | 'balance'
 }
 
 //TYPES ACTIONS
 export const Types = {
     CLEAN: 'CLEAN',
+    CLEAN_CART: 'CLEAN_CART',
     CLEAN_SHOPPINGCART: 'CLEAN_SHOPPINGCART',
     CHANGE: 'CHANGE_SHOPPINGCART',
     CHANGE_VALUE: 'CHANGE_SHOPPINGCART',

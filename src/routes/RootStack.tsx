@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/AntDesign'
 import Splash from '../screens/splash';
 import Home from '../screens/home';
 import ShoppingCart from '../screens/shoppingCart';
+import Finish from '../screens/finish';
 import Circle from '../components/Circle';
 import Colors from '../assets/Colors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -81,6 +82,11 @@ const RootStack = () => {
                 name="Splash"
                 component={Splash}
             />  
+
+            <Stack.Screen
+                name="Finish"
+                component={Finish}
+            /> 
 
         </Stack.Navigator>
     )

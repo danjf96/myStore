@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import { GlobalStyle } from '../../assets/GlobalStyles'
@@ -12,8 +12,8 @@ import Styles from './styles'
 const ShoppingCart = (props:any) => {
 
     const dispatch = useDispatch()
-    const { shoppingCart: { cart, loading, totalPrice } } = useSelector( ({ shoppingCart  } ) => ({  shoppingCart }) )
-    const [ openModal, setOpenModal ] = useState(true)
+    const { shoppingCart: { cart,  totalPrice } } = useSelector( ({ shoppingCart  } ) => ({  shoppingCart }) )
+    const [ openModal, setOpenModal ] = useState(false)
 
     const changeQuantity = (type: string, id:string) => {
         let newCart = cart
@@ -31,6 +31,12 @@ const ShoppingCart = (props:any) => {
         const totalPrice = newCart.length > 0 ? newCart.map( n => n.price * n.number).reduce( (a,b) => a+b) : 0
         dispatch( changeShoppingCart({ cart: newCart, totalPrice }))
 
+    }
+
+    const finish = (type: 'creditCard' | 'balance') => {
+        dispatch( changeShoppingCart({ payment: type }))
+        setOpenModal(false)
+        props.navigation.navigate('Finish')
     }
 
     return (
@@ -60,8 +66,8 @@ const ShoppingCart = (props:any) => {
                     text={'Escolha uma forma de pagamento'} 
                     textButton={'USAR CARTÃO CADASTRADO'} 
                     textSecondButton='USAR SALDO DISPONIVEL' 
-                    onPress={() => null} 
-                    onPressSecondButton={() => null}
+                    onPress={() => finish('creditCard')} 
+                    onPressSecondButton={() => finish('balance')}
                     onClose={ () => setOpenModal(false)}
                 />  
 

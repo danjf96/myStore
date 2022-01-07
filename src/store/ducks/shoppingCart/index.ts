@@ -19,7 +19,8 @@ const STATE = (state = INITIAL_STATE, action: any):STATESTORE => {
         case Types.CHANGE_VALUE:
             return { ...state, [action.key]: action.value }
         case Types.CLEAN:
-            return INITIAL_STATE
+        case Types.CLEAN_CART:
+            return { ...INITIAL_STATE, cart: []}
         default:
             return state;
     }
@@ -34,7 +35,13 @@ export const changeShoppingCart = (payload:any) => {
 
 export const changeShoppingCartValue = (key:string, value:any) => {
     return async (dispatch: (arg0:any) => any) => {
-        dispatch({ type: Types.CHANGE, key, value  })
+        dispatch({ type: Types.CHANGE_VALUE, key, value  })
+    }
+}
+
+export const cleanCart = () => {
+    return async (dispatch: (arg0:any) => any) => {
+        dispatch({ type: 'CLEAN'  })
     }
 }
 export default STATE
