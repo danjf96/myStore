@@ -1,4 +1,5 @@
 import { Platform, StyleSheet } from "react-native";
+import Colors from "../../assets/Colors";
 
 const Styles = StyleSheet.create({
     containerCard: {
@@ -12,7 +13,7 @@ const Styles = StyleSheet.create({
         backgroundColor: 'white',
         ...Platform.OS == 'ios' ?
         {
-            shadowColor: 'black',
+            shadowColor: Colors.backgroundModal,
             shadowOffset: { 
                 width: 0, 
                 height: 4 

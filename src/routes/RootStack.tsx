@@ -7,8 +7,9 @@ import Icon from 'react-native-vector-icons/AntDesign'
 import Splash from '../screens/splash';
 import Home from '../screens/home';
 import ShoppingCart from '../screens/shoppingCart';
-import { View } from 'react-native';
 import Circle from '../components/Circle';
+import Colors from '../assets/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 
@@ -17,18 +18,27 @@ const Tab = createBottomTabNavigator();
 const BottomTabs = () => {
 
     return (
-        <Tab.Navigator initialRouteName="Home">
+        <Tab.Navigator initialRouteName="Home" screenOptions={{
+            headerStyle: {
+                backgroundColor: Colors.principal
+            } ,
+            headerTitleStyle: {
+                color: Colors.textSecondary
+            }
+        }}>
             <Tab.Screen 
                 name="Home" 
                 component={Home}
                 options={{
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
-                        <Icon
-                            name="home"
-                            size={size}
-                            color={color}
-                        />
+                        <TouchableOpacity>
+                            <Icon
+                                name="home"
+                                size={size}
+                                color={color}
+                            />
+                        </TouchableOpacity>
                     ),
                 }}
             />
@@ -38,14 +48,16 @@ const BottomTabs = () => {
                 options={{
                     tabBarLabel: 'Shopping Cart',
                     tabBarIcon: ({ color, size }) => (
-                        <View>
-                            <Icon
-                                name="shoppingcart"
-                                size={size}
-                                color={color}
-                            />
-                            <Circle style={{ position: 'absolute', left: 25, top: -5 }} />
-                        </View>
+                        <>
+                            <TouchableOpacity>
+                                <Icon
+                                    name="shoppingcart"
+                                    size={size}
+                                    color={color}
+                                />
+                            </TouchableOpacity>
+                            <Circle style={{ position: 'absolute', right: '35%', top: -5 }} />
+                        </>
                     ),
                 }}
             />
